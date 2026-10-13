@@ -1,0 +1,123 @@
+
+.Menu {
+    width: 100%;
+    min-height: 68px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #dce6ee;
+    box-shadow: 0 4px 14px rgba(25, 65, 95, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+/* Limit the menu width and align its content horizontally. */
+.menu-content {
+    width: min(1250px, calc(100% - 40px));
+    min-height: 68px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.Menu a {
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #294c60;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.Menu a:hover {
+    color: #0077b6;
+    background-color: #edf8fc;
+}
+
+/* Highlight the link matching the current route. */
+.Menu a.active {
+    color: white;
+    background-color: #0077b6;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.user-area span {
+    padding-left: 18px;
+    border-left: 1px solid #dce6ee;
+    color: #294c60;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.user-area button {
+    padding: 9px 15px;
+    border: 1px solid #dce6ee;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f3f7f9;
+    color: #294c60;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.user-area button:hover {
+    border-color: #d62828;
+    background-color: #fff0f1;
+    color: #d62828;
+    transform: none;
+}
+
+/* Stack menu sections vertically on tablets and smaller screens. */
+@media (max-width: 800px) {
+    .menu-content {
+        width: calc(100% - 20px);
+        padding: 9px 0;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .menu-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .user-area {
+        width: 100%;
+        justify-content: center;
+        padding-top: 8px;
+        border-top: 1px solid #e4edf2;
+    }
+
+    .user-area span {
+        padding-left: 0;
+        border-left: none;
+    }
+}
+
+/* Reduce link spacing and allow the user area to wrap on mobile. */
+@media (max-width: 500px) {
+    .Menu a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .user-area {
+        flex-wrap: wrap;
+    }
+}

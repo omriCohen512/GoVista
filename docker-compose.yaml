@@ -1,0 +1,43 @@
+services:
+
+    mysql-service:
+        image: mysql:8
+        container_name: govista-mysql
+        restart: unless-stopped
+        volumes:
+            - mysql-volume:/var/lib/mysql
+            - ./Database/vacations.sql:/docker-entrypoint-initdb.d/vacations.sql:ro
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: vacations
+
+    backend-service:
+        build: ./Backend
+        container_name: govista-backend
+        restart: unless-stopped
+        depends_on:
+            - mysql-service
+        env_file:
+            - ./Backend/.env
+        environment:
+            MYSQL_HOST: mysql-service
+            MYSQL_USER: root
+            MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: vacations
+        ports:
+            - "4000:4000"
+
+    frontend-service:
+        build: ./Frontend
+        container_name: govista-frontend
+        restart: unless-stopped
+        depends_on:
+            - backend-service
+        environment:
+            VITE_RECAPTCHA_SITE_KEY: ${VITE_RECAPTCHA_SITE_KEY}
+        ports:
+            - "5173:5173"
+
+volumes:
+    mysql-volume:
+        

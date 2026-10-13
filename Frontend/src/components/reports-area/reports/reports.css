@@ -1,0 +1,101 @@
+.Reports {
+    width: min(1150px, calc(100% - 30px));
+    margin: 45px auto;
+}
+
+.reports-title {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.reports-title h2 {
+    margin-bottom: 8px;
+    color: #023e8a;
+    font-size: 30px;
+}
+
+.reports-title p {
+    margin: 0;
+    color: #6b7f8e;
+    font-size: 14px;
+}
+
+.reports-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+}
+
+.reports-actions button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 9px;
+    background-color: #0077b6;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.reports-actions button:hover {
+    background-color: #023e8a;
+}
+
+.chart-card {
+    padding: 28px;
+    background-color: white;
+    border: 1px solid #dce6ee;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(20, 55, 80, 0.1);
+}
+
+.chart-title {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.chart-title h3 {
+    margin: 0 0 4px;
+    color: #183153;
+    font-size: 21px;
+}
+
+.chart-title span {
+    color: #7a8d9b;
+    font-size: 13px;
+}
+
+.chart {
+    width: 100%;
+    height: 400px;
+}
+
+.no-report {
+    margin: 50px 0;
+    text-align: center;
+    color: #7a8d9b;
+    font-size: 16px;
+}
+
+@media (max-width: 700px) {
+    .Reports {
+        margin-top: 30px;
+    }
+
+    .chart-card {
+        padding: 22px 12px;
+    }
+
+    .reports-actions {
+        justify-content: center;
+    }
+
+    .reports-actions button {
+        width: 100%;
+    }
+
+    .chart {
+        height: 360px;
+    }
+}

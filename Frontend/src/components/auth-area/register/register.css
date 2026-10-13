@@ -1,0 +1,154 @@
+.Register {
+    min-height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 34px;
+    background-color: white;
+    border: 1px solid #dce6ee;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(20, 55, 80, 0.12);
+}
+
+.register-title {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.register-title h2 {
+    margin-bottom: 8px;
+    color: #023e8a;
+    font-size: 30px;
+}
+
+.register-title p {
+    margin: 0;
+    color: #6b7f8e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.Register form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Register label {
+    display: block;
+    margin: 6px 0 7px;
+    color: #3f596b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.Register input {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #dce6ee;
+    border-radius: 9px;
+    background-color: #ffffff;
+    color: #183153;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.Register input:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.12);
+}
+
+.Register form > span,
+.name-row span {
+    display: block;
+    min-height: 20px;
+    margin: 4px 0 2px;
+    color: #d62828;
+    font-size: 12px;
+}
+
+.name-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.name-row > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.Register form > button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 9px;
+    background-color: #0077b6;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.Register form > button:hover {
+    background-color: #023e8a;
+}
+
+.register-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid #e5edf2;
+}
+
+.register-bottom span {
+    color: #718391;
+    font-size: 13px;
+}
+
+.register-bottom button {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #0077b6;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.register-bottom button:hover {
+    color: #023e8a;
+    background: none;
+    transform: none;
+}
+
+@media (max-width: 550px) {
+    .Register {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+
+    .register-card {
+        padding: 27px 22px;
+    }
+
+    .register-title h2 {
+        font-size: 26px;
+    }
+
+    .name-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

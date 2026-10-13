@@ -1,0 +1,145 @@
+.EditVacation {
+    width: min(680px, calc(100% - 30px));
+    margin: 45px auto;
+}
+
+.edit-vacation-card {
+    padding: 36px;
+    background-color: white;
+    border: 1px solid #dce6ee;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(20, 55, 80, 0.12);
+}
+
+.form-title {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.form-title h2 {
+    margin-bottom: 8px;
+    color: #023e8a;
+    font-size: 30px;
+}
+
+.form-title p {
+    margin: 0;
+    color: #6b7f8e;
+    font-size: 14px;
+}
+
+.current-image {
+    margin-bottom: 26px;
+}
+
+.current-image span {
+    display: block;
+    margin-bottom: 8px;
+    color: #3f596b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.current-image img {
+    width: 100%;
+    height: 240px;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #dce6ee;
+}
+
+.EditVacation form {
+    display: flex;
+    flex-direction: column;
+}
+
+.EditVacation label {
+    margin: 7px 0 7px;
+    color: #3f596b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.EditVacation input,
+.EditVacation textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #dce6ee;
+    border-radius: 9px;
+    background-color: white;
+    color: #183153;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.EditVacation textarea {
+    min-height: 130px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.EditVacation input:focus,
+.EditVacation textarea:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.12);
+}
+
+.EditVacation input[type="file"] {
+    padding: 10px;
+    background-color: #f7fafc;
+}
+
+.EditVacation form > span,
+.date-row span {
+    display: block;
+    min-height: 20px;
+    margin: 4px 0 2px;
+    color: #d62828;
+    font-size: 12px;
+}
+
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.date-row > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.EditVacation button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 9px;
+    background-color: #0077b6;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.EditVacation button:hover {
+    background-color: #023e8a;
+}
+
+@media (max-width: 600px) {
+    .edit-vacation-card {
+        padding: 27px 22px;
+    }
+
+    .date-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .current-image img {
+        height: 190px;
+    }
+}

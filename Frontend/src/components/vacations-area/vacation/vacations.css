@@ -1,0 +1,112 @@
+.Vacations {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 40px 25px;
+}
+
+.Vacations > h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.filters button {
+    padding: 11px 20px;
+    cursor: pointer;
+    background-color: white;
+    color: var(--primary-dark);
+    border: 1px solid #cddde7;
+    box-shadow: 0 3px 9px rgba(20, 55, 80, 0.06);
+}
+
+.filters button:hover {
+    color: white;
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+.filters button:focus {
+    color: white;
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+.vacations-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: stretch;
+}
+
+.Vacations > p {
+    text-align: center;
+    margin: 50px 0;
+    color: var(--text-light);
+    font-size: 18px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 40px;
+}
+
+.pagination button {
+    min-width: 42px;
+    min-height: 42px;
+    padding: 8px 13px;
+    cursor: pointer;
+    background-color: white;
+    color: var(--primary-dark);
+    border: 1px solid var(--border);
+}
+
+.pagination button:hover:not(:disabled),
+.pagination button.active {
+    color: white;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.pagination button:disabled {
+    background-color: #edf1f4;
+    color: #9aa8b3;
+}
+
+@media (max-width: 1000px) {
+    .vacations-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .Vacations {
+        padding: 28px 15px;
+    }
+
+    .vacations-list {
+        grid-template-columns: 1fr;
+    }
+
+    .filters button {
+        flex: 1;
+        min-width: 130px;
+    }
+
+    .pagination button {
+        min-width: 38px;
+        min-height: 38px;
+        padding: 7px 10px;
+    }
+}

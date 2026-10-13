@@ -1,0 +1,28 @@
+
+.Layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Layout > header {
+    width: 100%;
+}
+
+/* Keep the navigation menu visible while scrolling. */
+.Layout > nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Fill the remaining space to keep the footer at the bottom. */
+.Layout > main {
+    flex: 1;
+    width: 100%;
+}
+
+.Layout > footer {
+    margin-top: 50px;
+}
