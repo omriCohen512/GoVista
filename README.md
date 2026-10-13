@@ -12,6 +12,7 @@ GoVista is a full-stack vacation management application developed for Full Stack
 ## Features
 
 ### Registered users
+
 - Register, log in, and log out
 - View vacations as cards, sorted by start date
 - Like or unlike vacations and see their like counts
@@ -21,15 +22,16 @@ GoVista is a full-stack vacation management application developed for Full Stack
 - Ask database-related questions using MCP
 
 ### Admin
+
 - Add, edit, and delete vacations
 - Upload vacation images
 - View a vacation likes report
 - Export vacation statistics as CSV
 
-## Project structure
+## Project Structure
 
 ```text
-Omri Cohen/
+GoVista/
 ├── Backend/                  # Node.js + Express API and MCP server
 ├── Frontend/                 # React + TypeScript application
 ├── Database/
@@ -38,7 +40,7 @@ Omri Cohen/
 └── README.md
 ```
 
-The Postman collection is included in the Backend folder.
+The Postman collection is included in the `Backend` folder.
 
 ## Running with Docker
 
@@ -78,7 +80,7 @@ The Postman collection is included in the Backend folder.
 
 On a **new Docker volume**, MySQL initializes the `vacations` database using `Database/vacations.sql`. Existing volumes retain their stored data and credentials.
 
-### Useful Docker commands
+### Useful Docker Commands
 
 ```bash
 docker compose ps
@@ -86,7 +88,9 @@ docker compose logs backend-service --tail=50
 docker compose down
 ```
 
-`docker compose down` stops and removes the containers without deleting named database volumes. **Do not use `docker compose down -v` unless you intentionally want to delete the database volume.**
+`docker compose down` stops and removes the containers without deleting named database volumes.
+
+**Do not use `docker compose down -v` unless you intentionally want to delete the database volume.**
 
 ## Running without Docker
 
@@ -110,15 +114,15 @@ npm start
 
 The frontend normally runs on port 5173 and the backend on port 4000.
 
-## Security notes
+## Security Notes
 
 - Do not commit `.env` files, API keys, passwords, or `node_modules`.
 - Keep backup SQL dumps containing user data outside public repositories.
 - Configure your own OpenAI and reCAPTCHA credentials before testing their features.
 
-## GitHub
+## GitHub Repository
 
-Repository: **Link to be added before submission.**
+**Repository:** https://github.com/omriCohen512/GoVista
 
 ## Author
 
